@@ -9,3 +9,6 @@
 * Length – minimum of 10 characters.
 * Contain both alphabet and number.
 * Include both the small and capital case letters.
+
+[Screen-Shot-2022-05-26-at-14-48-51.png](https://postimg.cc/dhZ06wBR)
+
