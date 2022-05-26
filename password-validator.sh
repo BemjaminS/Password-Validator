@@ -16,31 +16,32 @@ VALID_COLOR='\033[0;32m'
 PASSWORD=$1
 
 FLAG=0
-#check if password lenght at least 10 character
+#check if password lenght at least 10 character.
 if [ ${#PASSWORD} -ge 10 ]; then
     ((FLAG++))
 else
     echo $ERROR_COLOR"Password most be at least 8 caracter"$RESET_COLOR
 fi
-#check if password contain lowwe case letter
+#check if password contain lowwe case letter.
 if [[ $PASSWORD =~ [a-z] ]]; then
     ((FLAG++))
 else
     echo $ERROR_COLOR"Password does not contain lowerCase latter"$RESET_COLOR
 fi
-#check if paswword contain upper case letter
+#check if paswword contain upper case letter.
 if [[ $PASSWORD =~ [A-Z] ]]; then
     ((FLAG++))
 else
     echo $ERROR_COLOR"Password does not contain upperCase letter"$RESET_COLOR
 fi
-#check if passowrd contain number
+#check if passowrd contain number.
 if [[ $PASSWORD =~ [0-9] ]]; then
     ((FLAG++))
 else
     echo $ERROR_COLOR"Password does not contain Number" $RESET_COLOR
 fi
 
+#Checks if the password has passed all checks.
 if [ $FLAG -eq 4 ]; then
     echo $VALID_COLOR"Password vailid - Strong Password"$RESET_COLOR
     echo $?
